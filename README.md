@@ -32,8 +32,12 @@ A simple and elegant web app to upload and browse digital artworks. Built with H
 > No installation or server needed — it works directly in the browser!
 
 ## 📂 Project Structure
+
 digital-art-gallery/
 ├── index.html
 ├── script.js
-└─ README.md
+├── README.md
+└── Screenshots
+
+
 
