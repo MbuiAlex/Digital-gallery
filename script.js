@@ -1,8 +1,6 @@
-// app.js - Digital Art Gallery (No Purchase Button)
-
 let artworks = [];
 
-// Load artworks from localStorage
+
 function loadArtworks() {
     const savedArtworks = localStorage.getItem('artworks');
     if (savedArtworks) {
@@ -10,12 +8,11 @@ function loadArtworks() {
     }
 }
 
-// Save artworks to localStorage
 function saveArtworks() {
     localStorage.setItem('artworks', JSON.stringify(artworks));
 }
 
-// Display artworks without Purchase button
+
 function displayArtworks() {
     const gallery = document.getElementById('gallery');
     gallery.innerHTML = '';
@@ -44,7 +41,7 @@ function displayArtworks() {
     });
 }
 
-// Error display function
+
 function displayError(message) {
     const errorDiv = document.getElementById('error');
     if (errorDiv) {
@@ -54,7 +51,6 @@ function displayError(message) {
     }
 }
 
-// ==================== Fetch Popular Artworks from Met Museum ====================
 async function fetchPopularArtworks() {
     try {
         const gallery = document.getElementById('gallery');
@@ -108,7 +104,7 @@ async function fetchPopularArtworks() {
     }
 }
 
-// ==================== Upload Form Handler ====================
+
 document.getElementById('upload-form').addEventListener('submit', function(e) {
     e.preventDefault();
 
@@ -129,11 +125,12 @@ document.getElementById('upload-form').addEventListener('submit', function(e) {
     alert("✅ Artwork uploaded successfully!");
 });
 
-// Fetch button event
+
 document.getElementById('fetch-artworks').addEventListener('click', fetchPopularArtworks);
 
-// Initialize app
+
 window.onload = function() {
     loadArtworks();
     displayArtworks();
 };
+
