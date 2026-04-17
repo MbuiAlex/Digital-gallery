@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Art Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: lightgray;
+        }
+        .error-message {
+            color: red;
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen">
+    <header class="mb-4 py-20">
+        <h1 class="text-3xl font-bold">Digital Art Gallery</h1>
+    </header>
+    <main class="w-full max-w-md">
+        <section id="upload-section" class="mb-8">
+            <h2 class="text-xl mb-4">Upload Artwork</h2>
+            <form id="upload-form">
+                <input type="text" id="art-title" placeholder="Art Title" required aria-label="Art Title" class="border border-gray-300 p-2 w-full mb-2">
+                <input type="text" id="artist-name" placeholder="Artist Name" required aria-label="Artist Name" class="border border-gray-300 p-2 w-full mb-2">
+                <input type="url" id="art-image" placeholder="Image URL" required aria-label="Image URL" class="border border-gray-300 p-2 w-full mb-2">
+                <button type="submit" class="bg-blue-600 text-white p-2">Upload Art</button>
+            </form>
+        </section>
+        <section id="fetch-section" class="mb-8">
+            <h2 class="text-xl mb-4">Fetch Popular Artworks</h2>
+            <button id="fetch-artworks" class="bg-green-600 text-white p-2">Fetch Artworks</button>
+        </section>
+        <section id="gallery" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <h2 class="text-xl mb-4 col-span-2">Art Gallery</h2>
+            <!-- Artworks will be displayed here -->
+        </section>
+        <div id="error" class="error-message hidden"></div>
+    </main>
+    <script src="script.js" defer></script>
+</body>
+</html>
