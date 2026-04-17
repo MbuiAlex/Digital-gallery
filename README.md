@@ -33,11 +33,14 @@ A simple and elegant web app to upload and browse digital artworks. Built with H
 
 ## 📂 Project Structure
 
+
 digital-art-gallery/
-├── index.html
-├── script.js
-├── README.md
-└── Screenshots
+
+├── index.html          
+├── script.js           
+├── README.md           
+└── Screenshots      
+    
 
 
 
